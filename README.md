@@ -1,6 +1,6 @@
 # flutter_river_flow
 
-A new Flutter project.
+This is a sandbox for package freezed and riverpod.
 
 ## Getting Started
 
