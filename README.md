@@ -2,15 +2,36 @@
 
 This is a sandbox for package freezed and riverpod.
 
-## Getting Started
+Riverpod https://riverpod.dev/docs/getting_started/
+Freezed https://pub.dev/packages/freezed
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## TODO
+- [ ] Using each Providers
+  - [ ] FutureProvider
+    - [ ] combine other FutureProvider
+    - [ ] 
+  - [ ] StreamProvider
+  - [ ] Provider
+  - [ ] StateProvider
+  - [ ] StateNotifierProvider
+  - [ ] ChangeNotifierProvider
+- [ ] Testing each providers
+- [ ] Obtaining Providers
+  - [ ] extends ConsumerWidget [link](https://riverpod.dev/docs/concepts/reading/#extending-consumerwidget-instead-of-statelesswidget)
+  - [ ] extends ConsumerStatefuleWidget [link](https://riverpod.dev/docs/concepts/reading/#extending-consumerstatefulwidgetconsumerstate-instead-of-statefulwidgetstate)
+  - [ ] extends HookConsumerWidget [link](https://riverpod.dev/docs/concepts/reading/#extending-consumerstatefulwidgetconsumerstate-instead-of-statefulwidgetstate)
+  - [ ] extends StatefulHookConsumerWidget [link](https://riverpod.dev/docs/concepts/reading/#extending-statefulhookconsumerwidget-instead-of-hookwidget)
+  - [ ] Consumer widget/ HookConsumer widget [link](https://riverpod.dev/docs/concepts/reading/#consumer-and-hookconsumer-widgets)
+- [ ] Techniques
+  - [ ] Using select [link](https://riverpod.dev/docs/concepts/reading/#using-select-to-filter-rebuilds)
+  - [ ] changing StreamProvider into Future, FutureProvider into Stream
+  - [ ] using .family
+  - [ ] passing multiple parameters
+  - [ ] ref.keepAlive
+  - [ ] ref.onDispose
+  - [ ] ProviderObserver
+- [ ] Usecases
+  - [ ] Keeping Auth State with Riverpod
+  - [ ] Keep watching Firestore document
+  - [ ] Keep watching Firestore Collection
+  - [ ] Using Providers in widget's lifecycle
