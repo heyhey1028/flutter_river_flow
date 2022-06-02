@@ -21,7 +21,7 @@ class MainDrawer extends StatelessWidget {
                     radius: 50,
                   ),
                   const SizedBox(height: 16),
-                  const Text('FLUTTER JUKE BOX'),
+                  const Text('FLUTTER RIVER FLOW'),
                 ],
               ),
             ),

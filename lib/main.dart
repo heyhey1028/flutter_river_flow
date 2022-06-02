@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_river_flow/widgets/app_scaffold.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -8,7 +9,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -35,7 +37,6 @@ class MyHomePage extends StatelessWidget {
         children: [
           Center(
             child: Container(
-              child: const Center(child: Text('Welcome to My Juke Box!!!')),
               width: double.infinity,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -45,6 +46,14 @@ class MyHomePage extends StatelessWidget {
                     Colors.blue[600]!,
                     Colors.blue[400]!,
                   ],
+                ),
+              ),
+              child: const Center(
+                child: Text(
+                  'Welcome to Flutter River Flow!!!\n'
+                  'This app is inteded to show dozen of trials\n'
+                  'using riverpod and freezed\n',
+                  textAlign: TextAlign.center,
                 ),
               ),
             ),
