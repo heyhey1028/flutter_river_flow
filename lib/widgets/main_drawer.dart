@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_river_flow/main.dart';
+import 'package:flutter_river_flow/screens/auth/auth_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({Key? key}) : super(key: key);
@@ -30,6 +31,12 @@ class MainDrawer extends StatelessWidget {
               icon: const Icon(Icons.home),
               title: 'HOME',
               navigateTo: const MyHomePage(),
+            ),
+            DrawerTile(
+              color: Colors.pink[100]!,
+              icon: const Icon(Icons.home),
+              title: 'AUTH EXAMPLE',
+              navigateTo: AuthScreen(),
             ),
           ],
         ),

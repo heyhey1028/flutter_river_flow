@@ -7,11 +7,13 @@ class AppScaffold extends StatelessWidget {
     required this.body,
     this.floatingActionButton,
     this.title,
+    this.color = Colors.blue,
   }) : super(key: key);
 
   final Widget body;
   final Widget? floatingActionButton;
   final Widget? title;
+  final MaterialColor color;
   final _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -30,7 +32,25 @@ class AppScaffold extends StatelessWidget {
       ),
       drawer: const MainDrawer(),
       extendBodyBehindAppBar: true,
-      body: body,
+      body: Stack(
+        children: [
+          Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                colors: [
+                  color[900]!,
+                  color[600]!,
+                  color[400]!,
+                ],
+              ),
+            ),
+          ),
+          body,
+        ],
+      ),
       floatingActionButton: floatingActionButton,
     );
   }
