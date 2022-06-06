@@ -10,6 +10,16 @@ class AuthScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final pageState = ref.watch(pageStateProvider);
+
+    void changePageState(PageState state) {
+      if (state == PageState.signUp) {
+        ref.read(pageStateProvider.notifier).state = PageState.logIn;
+      } else {
+        ref.read(pageStateProvider.notifier).state = PageState.signUp;
+      }
+    }
+
     return AppScaffold(
       color: Colors.pink,
       body: Center(
@@ -41,12 +51,32 @@ class AuthScreen extends ConsumerWidget {
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () => null,
-                child: const Text('Sign up / Log in'),
+                child: Text(pageState.name),
+              ),
+              const SizedBox(height: 20),
+              TextButton(
+                onPressed: () => changePageState(pageState),
+                child: Text(
+                  getButtonText(pageState),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
               ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  String getButtonText(PageState state) {
+    switch (state) {
+      case PageState.logIn:
+        return 'Go to Sign up';
+      case PageState.signUp:
+        return 'Go to Log in';
+    }
   }
 }
