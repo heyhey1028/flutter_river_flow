@@ -20,6 +20,7 @@ dependencies:
   riverpod: ^1.0.3
   firebase_core: ^1.17.1
   flutter_riverpod: ^1.0.4
+  firebase_auth: ^3.3.19
 
 dev_dependencies:
   flutter_test:
