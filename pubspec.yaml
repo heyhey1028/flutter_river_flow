@@ -21,6 +21,8 @@ dependencies:
   firebase_core: ^1.17.1
   flutter_riverpod: ^1.0.4
   firebase_auth: ^3.3.19
+  nil: ^1.1.1
+  loader_overlay: ^2.0.7
 
 dev_dependencies:
   flutter_test:

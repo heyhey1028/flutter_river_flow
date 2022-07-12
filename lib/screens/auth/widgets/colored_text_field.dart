@@ -7,18 +7,23 @@ class ColoredTextField extends StatelessWidget {
     required this.hintText,
     this.icon,
     this.color = Colors.white,
+    this.obscureText = false,
   }) : super(key: key);
 
   final TextEditingController controller;
   final Color color;
   final IconData? icon;
   final String hintText;
+  final bool obscureText;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
       cursorColor: color,
+      autocorrect: false,
+      enableSuggestions: false,
+      obscureText: obscureText,
       style: TextStyle(color: color),
       decoration: InputDecoration(
         focusColor: color,
