@@ -30,6 +30,9 @@ This is a sandbox for package freezed and riverpod.
   - [ ] ref.keepAlive
   - [ ] ref.onDispose
   - [ ] ProviderObserver
+  - [ ] Using ref.listen
+  - [ ] Using ref.read
+  - [ ] Using ref.refresh
 - [ ] Usecases
   - [ ] Keeping Auth State with Riverpod
   - [ ] Keep watching Firestore document
@@ -38,3 +41,7 @@ This is a sandbox for package freezed and riverpod.
   - [ ] Access ProviderFamily without arguments in nested widgets
   - [ ] Implement class method for Freezed classes
   - [ ] Making StateNotifierProvider with Future [link](https://github.com/rrousselGit/riverpod/issues/57)
+  - [ ] Localization management with Riverpod
+  - [ ] Error handling with Riverpod
+  - [ ] GoRouter with Riverpod
+  - [ ] Enhance StateNotifier with AsyncValues
